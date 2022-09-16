@@ -1,0 +1,298 @@
+@media (max-width: 1199.98px) {
+   .header {
+      &__inner {
+         padding-bottom: 200px;
+      }
+   }
+
+   .news--big {
+      img {
+         max-width: 450px;
+      }
+   }
+
+   .news--small {
+      img {
+         max-width: 200px;
+      }
+   }
+}
+
+@media (max-width: 991.98px) {
+   .header {
+      &__inner {
+         padding-bottom: 160px;
+      }
+
+      &__body {
+         margin-top: 125px;
+      }
+
+      &__title {
+         font-size: 50px;
+      }
+   }
+
+   .nav {
+      padding: 25px 0;
+
+      &__item:not(:last-child) {
+         margin-right: 20px;
+      }
+
+      &__link {
+         font-size: 16px;
+      }
+
+      &__button {
+         padding: 10px 30px;
+      }
+   }
+
+   .popular-location {
+      &__inner {
+         padding: 120px 0;
+      }
+
+      &__title {
+         font-size: 38px;
+      }
+
+      &__box {
+         flex-direction: column;
+      }
+   }
+
+   .blog {
+      &__inner {
+         padding: 120px 0;
+      }
+
+      &__text {
+         margin-bottom: 40px;
+      }
+
+      &__news-block {
+         flex-direction: column;
+      }
+   }
+
+   .news--small:not(:last-child) {
+      margin-bottom: 20px;
+   }
+
+   .footer {
+      &__inner {
+         flex-wrap: wrap;
+         gap: 30px;
+         padding: 50px 0 58px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .header {
+      background-position: left;
+      &__inner {
+         padding-bottom: 120px;
+      }
+
+      &__body {
+         margin-top: 85px;
+      }
+
+      &__title {
+         font-size: 40px;
+      }
+   }
+
+   .nav {
+      position: relative;
+
+      &__list {
+         position: fixed;
+         top: 0;
+         right: -200%;
+         width: 100%;
+         height: 100%;
+         z-index: 100;
+         background-color: $lightTextHover;
+         flex-direction: column;
+         align-items: center;
+         overflow: auto;
+         transition: right 0.5s ease-in-out;
+         padding: 100px 50px;
+      }
+
+      &__item:not(:last-child) {
+         margin-right: 0;
+         margin-bottom: 30px;
+      }
+
+      &__link {
+         font-size: 30px;
+         color: $darkText;
+      }
+
+      &__list.active {
+         right: 0;
+      }
+
+      &__burger {
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 30px;
+         z-index: 200;
+         cursor: pointer;
+
+         span {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 13.5px;
+            width: 100%;
+            height: 3px;
+            background-color: $lightText;
+            transition: right 0.2s ease-in-out;
+         }
+
+         &::after,
+         &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 3px;
+            background-color: $lightText;
+            transition: all 0.4s ease-in-out 0.1s;
+         }
+
+         &::before {
+            top: 0;
+         }
+
+         &::after {
+            bottom: 0;
+         }
+      }
+
+      &__burger.active {
+         span {
+            right: -200%;
+         }
+
+         &::after,
+         &::before {
+            background-color: $darkText;
+         }
+
+         &::before {
+            top: 10px;
+            transform: rotate(45deg);
+         }
+
+         &::after {
+            top: 10px;
+            transform: rotate(-45deg);
+         }
+      }
+
+      &__buttons-block {
+         display: flex;
+         align-items: center;
+      }
+
+      &__button {
+         margin-right: 45px;
+      }
+   }
+
+   .popular-location {
+      &__inner {
+         padding: 100px 0;
+      }
+   }
+
+   .blog {
+      &__inner {
+         padding: 100px 0;
+      }
+   }
+
+   .footer {
+      &__inner {
+         justify-content: center;
+         text-align: center;
+         gap: 50px;
+      }
+
+      &__socials {
+         justify-content: center;
+      }
+
+      &__nav {
+         gap: 80px;
+      }
+
+      &__form {
+         gap: 0;
+      }
+   }
+}
+
+@media (max-width: 575.98px) {
+   .header {
+      &__title {
+         font-size: 35px;
+      }
+   }
+
+   .nav {
+      &__button {
+         display: none;
+      }
+   }
+
+   .popular-location {
+      &__title {
+         font-size: 33px;
+      }
+
+      &__link-title {
+         font-size: 20px;
+      }
+   }
+
+   .blog {
+      &__news-block {
+         gap: 40px;
+      }
+   }
+
+   .news--big {
+      text-align: center;
+
+      img {
+         max-width: 300px;
+      }
+
+      .news__body {
+         margin-top: 20px;
+      }
+   }
+
+   .news--small {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+   }
+
+   .footer {
+      &__nav {
+         flex-direction: column;
+         gap: 20px;
+      }
+   }
+}
